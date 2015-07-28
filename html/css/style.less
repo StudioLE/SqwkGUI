@@ -1,0 +1,85 @@
+@import "../bower_components/bootstrap/less/mixins.less";
+@import "../bower_components/bootstrap/less/variables.less";
+
+@bg: #272822;
+@main_bg: #01549e;
+@text: #fff;
+
+@font_family: Consolas, monospace; //Lucida Console
+@font_size: 14px;
+
+@margin_bottom: 14px;
+
+@link_margin_vert: 2px;
+@link_margin_horz: 20px;
+
+/*****************************************************************
+*
+* Style defaults
+*
+******************************************************************/
+
+body {
+  background: @bg;
+  color: #fff;
+  font-family: @font_family;
+  font-size: @font_size;
+}
+
+::selection {
+  background: rgba(227, 80, 80, 0.5);
+  color: #fff;
+}
+
+a {
+  margin: -@link_margin_vert -@link_margin_horz;
+  padding: @link_margin_vert @link_margin_horz;
+  background: fade(@text, 10%);
+  color: fade(@text, 80%);
+  display: block;
+}
+
+a:hover, a:focus {
+  background: fade(@text, 80%);
+  color: @bg;
+  text-decoration: none;
+}
+
+h1 {
+  margin: 0 0 @margin_bottom;
+  font-size: @font_size;
+}
+
+p {
+  margin: 0 0 @margin_bottom;
+}
+
+/*****************************************************************
+*
+* Main
+*
+******************************************************************/
+
+html, body, .main {
+    height: 100%;
+}
+.container-fluid {
+  padding: 0;
+}
+
+.main {
+  padding: 50px @link_margin_horz 50px;
+  background: @main_bg;
+}
+
+/*****************************************************************
+*
+* Angular
+*
+******************************************************************/
+
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+    cursor: pointer;
+}

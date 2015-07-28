@@ -1,0 +1,18 @@
+{
+  "name": "sqwk-gui",
+  "description": "GUI component of Sqwk",
+  "version": "0.1.0-alpha",
+  "homepage": "https://github.com/StudioLE/SqwkGUI",
+  "license": "",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "lodash": "~3.10.0",
+    "bootswatch-dist": "simplex",
+    "less": "~2.5.1",
+    "bootstrap": "~3.3.5",
+    "angular-socket-io": "~0.7.0",
+    "ansi_up": "~1.2.1"
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="app" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="app" ng-controller="SqwkCtrl" class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{{ title  }}</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="css/style.css"> -->
+<link rel="stylesheet/less" href="css/style.less">
+<script src="bower_components/less/dist/less.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="main">
+    <!-- <div ng-view></div> -->
+    <h1 ng-model="title">{{ title  }}</h1>
+    <p ng-repeat="message in messages">
+      {{ message }}
+    </p>
+    <p ng-repeat="option in options">
+      <a ng-click="selected(option, $index)">{{ option }}</a>
+    </p>
+  </div> <!-- .main -->
+</div> <!-- .container-fluid -->
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="socket.io/socket.io.js"></script>
+<script src="bower_components/angular-socket-io/socket.js"></script>
+<script src="bower_components/ansi_up/ansi_up.js"></script>
+<script src="app.js"></script>
+<script src="sqwk-controller.js"></script>
+</body>
+</html>
